@@ -100,11 +100,11 @@ git push -u origin main
 
 ***Important:*** if this happen after git push
 
-> To https://github.com/<Username>/References.git
+> To https://github.com/Username/Repository.git
 > 
 > ! [rejected]        main -> main (non-fast-forward)
 > 
-> error: failed to push some refs to 'https://github.com/<Username>/<Repository>.git'
+> error: failed to push some refs to 'https://github.com/Username/Repository.git'
 > 
 > hint: Updates were rejected because the tip of your current branch is behind 
 > 
@@ -131,3 +131,5 @@ Then, push
 ```
 git push origin main
 ```
+
+---
