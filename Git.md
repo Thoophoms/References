@@ -39,67 +39,95 @@
 ---
 
 
-# Push Your Own Project to Github
+---
 
-**Username:** Your GitHub username
+### Create git local repository
 
-**Token:** Your GitHub token
+`git init`
 
-### 1. In the IntelliJ IDEA terminal, configure Git with your GitHub username
+### See the hidden file
+
+`ls -a`
+
+### See what file has not been track
+
+`git status`
+
+### add file
+
+`git add filename`
+
+### commit file
 
 ```
-git config --global user.name "Username"
+git commit -m "Message commit in present tense"
 ```
 
-***Note:*** Replace Username with your GitHub username
+### see that the message I commit
 
-### 2. In the IntelliJ IDEA terminal, configure Git with your GitHub email
+`git log`
+
+### See what difference between this file and the last file
+
+`git diff filename`
+
+
+### Get the last version of the file
+
+`get checkout filename`
+
+
+### Create the remote repository
+
+``` get remote add <name> <url> ```
+
+***Example***
 
 ```
-git config --global user.email "thoophom.su@gmail.com" 
+git remote add origin https://github.com/Thoophoms/References.git
 ```
-***Note:*** Replace email with your GitHub email address
 
+### Push
 
-### 3. Use CLI to login
+```
+git push -u <remote name> <branch name>
+```
+***Example***
 
-***Note:*** if you don't have one, you can install it
+```
+git push -u origin main
+```
 
-`brew install gh`
+***Important:*** if this happen after git push
 
-If you already have it follow the instruction
+> To https://github.com/<Username>/References.git
+> 
+> ! [rejected]        main -> main (non-fast-forward)
+> 
+> error: failed to push some refs to 'https://github.com/<Username>/<Repository>.git'
+> 
+> hint: Updates were rejected because the tip of your current branch is behind 
+> 
+> hint: its remote counterpart. Integrate the remote changes (e.g. 
+> 
+> hint: 'git pull ...') before pushing again. 
+> 
+> hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
-`gh auth login`
+Do this:
 
-You will see something like this, click enter
+```
+git pull https://github.com/<Username>/<Repository>.git
+```
 
-> What account do you want to log into?  [Use arrows to move, type to filter]
->
-> ">" GitHub.com
->
->GitHub Enterprise Server
+Then, commit again
 
-Then, you will see the below chose HTTP
+```
+git commit -m "commit message"
+```
 
-> ? What is your preferred protocol for Git operations on this host?  [Use arrows to move, type to filter]
->
-> ">" HTTPS
->
-> SSH
+Then, push
 
-Then, you will see the below, type Y
-
-> Authenticate Git with your GitHub credentials? (Y/n)
-
-Then, you will see below, select paste an authentication token
-
-> How would you like to authenticate GitHub CLI?  [Use arrows to move, type to filter]
->
-> Login with a web browser
->
-> ">" Paste an authentication token
-
-Then, it will ask you to place token you just created
-
-> ? Paste your authentication token: 
-
+```
+git push origin main
+```
