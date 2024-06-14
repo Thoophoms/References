@@ -38,8 +38,23 @@
 
 ---
 
+# Push file into your own GitHub
 
----
+### Cd into your directory
+
+`cd yourDirectory`
+
+### Make file if necessary
+
+`touch fileName`
+
+### If you want to edit that file in the the program
+
+`open -a /Applications/ApplicationName .`
+
+> ***Note: .*** is to open the whole folder/project
+
+After done with editing
 
 ### Create git local repository
 
@@ -133,3 +148,21 @@ git push origin main
 ```
 
 ---
+
+### If there is any changes after push or create remote repository
+
+You can edit it and save
+
+Then, add
+
+`git add fileName`
+
+Then, commit
+
+```
+git commit -m "You commit message in present tense"
+```
+
+Then, push it back
+
+`git push origin main`
