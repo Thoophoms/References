@@ -166,3 +166,98 @@ git commit -m "You commit message in present tense"
 Then, push it back
 
 `git push origin main`
+
+___
+
+
+# Working on the same project you cloned after someone made changed on their side
+
+***Note:*** If you do git pull and this happens
+
+```
+git pull https://github.com/TheirUsername/TheirUsername.github.io.git
+```
+
+> remote: Enumerating objects: 70, done.
+>
+> remote: Counting objects: 100% (70/70), done.
+>
+> remote: Compressing objects: 100% (29/29), done.
+> remote: Total 70 (delta 48), reused 60 (delta 40), pack-reused 0
+>
+> Unpacking objects: 100% (70/70), 17.77 KiB | 96.00 KiB/s, done.
+>
+> From https://github.com/theirUsername/TheirUsername.github.io
+>
+> * branch            HEAD       -> FETCH_HEAD
+>
+> * hint: You have divergent branches and need to specify how to reconcile them.
+> * hint: You can do so by running one of the following commands sometime before
+> * hint: your next pull:
+> * hint:
+> * hint:   git config pull.rebase false  # merge
+> * hint:   git config pull.rebase true   # rebase
+> * hint:   git config pull.ff only       # fast-forward only
+> * hint:
+> * hint: You can replace "git config" with "git config --global" to set a default
+> * hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+> * hint: or --ff-only on the command line to override the configured default per
+> * hint: invocation.
+>
+> fatal: Need to specify how to reconcile divergent branches.
+
+The message you encountered means that your local branch and the remote branch have diverged, and Git needs to know how to reconcile the differences between them. You have three options to handle this situation:
+
+1. Merge: This will create a merge commit that combines the changes from both branches.
+
+2. Rebase: This will move your local commits on top of the latest commits from the remote branch.
+3. Fast-forward only: This will only update your branch if it can be "fast-forwarded," meaning there are no divergent changes and the remote branch is ahead of your local branch.
+
+To fix the issue, you need to choose one of these options. Here are the commands you can use:
+
+I normally rebase to get the updated version of `Their GitHub`
+
+`git config pull.rebase true`
+
+Then, `git pull`
+
+```
+git pull https://github.com/TheirUsername/TheirUsername.github.io.git
+```
+
+***BUT*** If this happens
+
+> error: cannot pull with rebase: You have unstaged changes.
+>
+> error: please commit or stash them.
+>
+> YourName TheirUsername.github.io % git status
+>
+> On branch YourBranchName
+>
+> Changes not staged for commit:
+>
+> (use "git add <file>..." to update what will be committed)
+>
+> (use "git restore <file>..." to discard changes in working directory)
+>
+> modified:   .idea/misc.xml
+>
+> no changes added to commit (use "git add" and/or "git commit -a")
+
+### Do `git stach` to save what you are working on and then, `pull.rebase`, `pull` again, and make new `branch`
+
+`git stash` is a Git command that allows you to temporarily save changes that you've made to your working directory but are not ready to commit. This is useful when you want to switch branches, pull updates, or perform other Git operations without losing your current work. When you stash changes, Git takes the uncommitted changes (both staged and unstaged) and saves them on a stack. You can then apply these changes later when you're ready.
+
+# `git stash`
+
+## `git config pull.rebase true`
+
+```
+git pull https://github.com/TheirUsername/TheirUsername.github.io.git
+```
+
+### `git checkout -b newBranchName`
+
+---
+
