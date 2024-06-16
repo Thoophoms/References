@@ -261,3 +261,36 @@ git pull https://github.com/TheirUsername/TheirUsername.github.io.git
 
 ---
 
+
+### Remove all file we just add from using git add .
+
+`git rm —cached -r  .`
+
+### To check if all files have been removed from the staging area
+
+`git status`
+
+### Using `.gitignore` file to add all the file you wanted to be ignore and do not want to add them in the GitHub
+
+If there is no `gitignore` in your project, you can create one
+
+`touch .gitignore`
+
+1. Open .gitignore file
+2. Simply add each file in the `.gitignore` file
+
+   ***Example:***
+
+   	`.DS_Store`
+   	`Secrets.txt`
+
+   ***Rules:***
+
+   	1. Comment with #: # This is a comment
+   	
+   	2. * to add all the file
+
+   		***Example:***
+   		
+   			*.txt
+
