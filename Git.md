@@ -356,6 +356,59 @@ The owner will see the pull request and will be able to compare their code and t
 6. Add comment
 7. Click `Merge`
 
+### Working on Forking and Pull Requests on terminal on IntelliJ
+
+1. Fork the repository on GitHub
+   - Go to their repository in GitHub.com and click `fork` to create your own copy
+2. Clone the forked repository
+
+```
+git clone https://github.com/your-username/repository-name.git
+```
+
+3. Navigate into the cloned repository
+
+```
+cd repository-name
+```
+
+4. Add the Originally Repository as remote:
+
+   -  This step allows you to keep your fork updated with the original repository.
+
+```
+git remote add upstream https//github.com/original-username/repository-name.git
+```
+
+5. Create a new branch for the changes
+
+```
+git checkout -b your-branch-name
+```
+
+6. Make Your Changes
+
+7. Add and Commit your changes
+
+`git add file-name`
+
+```
+git commit -m "Your commit message"
+```
+
+8. Push your changes to GitHub
+
+```
+git push origin your-branch-name
+```
+
+9. Create a Pull request
+
+   - Go to your forked repository on GitHub
+   - Click `Compare & pull request`
+   - Add necessary comments
+   - Click `submit the pull request`
+
 ___
 
 
