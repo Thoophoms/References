@@ -294,3 +294,32 @@ If there is no `gitignore` in your project, you can create one
    		
    			*.txt
 
+---
+
+# Branching and Merging
+
+You can do a parallel work with the main branch and parallel branches and later on you would like to merge it together
+
+### Check what branch you are current branch
+
+`git branch`
+
+### go to the new branch
+
+`git checkout branch-name`
+
+### Merge branch
+
+go to the main branch (what you'd like to merge the branch into)
+
+`git merge brach-name`
+
+Then, the vim will be opened to have you add comments/notes, if there's nothing to be added
+
+`:q!` - to quit the vim
+
+Then push with -u
+
+```
+git push origin main -u
+```
