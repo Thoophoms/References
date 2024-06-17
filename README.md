@@ -9,3 +9,4 @@ Cheat Sheets of the following
      - git add
      - git commit with message -m
      - git push
+     - Forking and creating a pull requests
