@@ -409,6 +409,28 @@ git push origin your-branch-name
    - Add necessary comments
    - Click `submit the pull request`
 
+### Check of the upsteam remote has been added correctly
+
+1. Verify the upstream remote
+   -  List all remote repositories to ensure that the upstream remote has been added
+      
+      `git remote -v`
+
+2. Fetch Updates from the upstream Remotes
+   - Fetch the latest changes from upstream repository
+     `git fetch upstream`
+
+3. Compare your branch with upstream branch
+   ```
+   git diff your-branch upstream/branch-name
+   ```
+   
+4. Then, you can add, commit, and push
+
+   ```
+   git push origin your-branch-name
+   ```
+   
 ___
 
 
