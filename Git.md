@@ -323,3 +323,39 @@ Then push with -u
 ```
 git push origin main -u
 ```
+
+___
+
+# Forking and Pull Requests
+
+***On GitHub Website***
+
+1. go into their repository
+
+`fork`
+
+2. Make some changes
+
+3. Commit changes
+
+4. click on `<> Code` tab
+   - click on `New Pull Request`
+   - click on `Create pull request`
+     - Put the comment
+     - click `Create pull request`
+
+***On Owner GitHub Website***
+
+The owner will see the pull request and will be able to compare their code and the new code we made and if they are satisfy with the modify codes, they will be able to merge it.
+
+1. Click `Review changes`
+2. Add comments
+3. Click `Approve`
+4. Click `Submit Review`
+5. Click `Merge pull request`
+6. Add comment
+7. Click `Merge`
+
+___
+
+
