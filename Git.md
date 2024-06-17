@@ -377,7 +377,7 @@ cd repository-name
    -  This step allows you to keep your fork updated with the original repository.
 
 ```
-git remote add upstream https//github.com/original-username/repository-name.git
+git remote add upstream https://github.com/original-username/repository-name.git
 ```
 
 5. Create a new branch for the changes
