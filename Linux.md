@@ -322,7 +322,7 @@ ___
   ```
   pkill -u USERNAME
   ```
-  Terminates all processes owned by the specified `USERNAME`.
+  Terminates all processes owned by the specified `USERNAME`
 
 ___
 
