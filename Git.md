@@ -434,3 +434,39 @@ git push origin your-branch-name
 ___
 
 
+## Commands
+
+- `git checkout -b branchName` : Create a new branch
+
+- `git checkout -d branchName` : Safe delete local branch
+
+- `git checkout -D branchName` : Force delete local branch
+
+- `git push original --delete branchName` : Delete romote branch
+
+___
+
+
+# Install Git on Ubuntu
+
+1. See if you already have git install
+
+`git`
+
+2. If command 'git' not found,
+
+`sudo apt update`
+
+`sudo apt install git`
+
+3. Verify if git install successful
+
+`git --version`
+
+4. Set your account's default identity
+
+- `git config --global user.email "you@example.com"`
+
+- `git config --global user.name "Your Name"`
+
+5. Verify with `git config --list` you wil see the email and the username listed
